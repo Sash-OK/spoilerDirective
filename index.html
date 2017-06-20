@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible"
+	      content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet"
+	      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css">
+	
+	<style>
+		.active {
+			color: green;
+		}
+		.hide {
+			display: none;
+		}
+		div {
+			padding: 10px;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<div data-ng-controller="MainCtrl as _ctrl" style="width:1000px;margin: 200px auto;">
+		<section data-my-spoiler data-active-class="active">
+			<h1>test</h1>
+			<div>
+				<a href="" data-spoiler-lnk class="active">Spoiler Link 1</a>
+				<p data-spoiler-body>{{_ctrl.data}} 1</p>
+			</div>
+			
+			<div>
+				<a href="" data-spoiler-lnk>Spoiler Link 2</a>
+				<p data-spoiler-body class="hide">{{_ctrl.data}} 2</p>
+			</div>
+			
+			<div>
+				<a href="" data-spoiler-lnk="">Spoiler Link 3</a>
+				<p data-spoiler-body class="hide">{{_ctrl.data}} 3</p>
+			</div>
+			
+			<div>
+				<a href="" data-spoiler-lnk>Spoiler Link 4</a>
+				<p data-spoiler-body class="hide">{{_ctrl.data}} 4</p>
+			</div>
+		</section>
+	</div>
+	
+	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
