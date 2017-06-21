@@ -16,9 +16,13 @@
 
                 $spoilerLink.on('click',function (e) {
                     e.preventDefault();
-                    $spoilerLink.not(this).removeClass(activeClass);
+
+                    angular.element(this).parent().siblings().find('[data-spoiler-lnk]').not(this).removeClass(activeClass);
+
                     angular.element(this).toggleClass(activeClass);
-                    $spoilerBody.not(angular.element(this).siblings($spoilerBody)).slideUp(300);
+
+                    angular.element(this).parent().siblings().find('[data-spoiler-body]').not(angular.element(this).siblings($spoilerBody)).slideUp(300);
+
                     angular.element(this).siblings($spoilerBody).slideToggle(300);
                 });
             }

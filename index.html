@@ -30,7 +30,14 @@
 			<h1>test</h1>
 			<div>
 				<a href="" data-spoiler-lnk class="active">Spoiler Link 1</a>
-				<p data-spoiler-body>{{_ctrl.data}} 1</p>
+				<div data-spoiler-body>
+					{{_ctrl.data}} 1
+					
+					<div>
+						<a href="" data-spoiler-lnk class="active">Inner Spoiler Link 1</a>
+						<p data-spoiler-body>{{_ctrl.data}} Inner</p>
+					</div>
+				</div>
 			</div>
 			
 			<div>
